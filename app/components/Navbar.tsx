@@ -34,17 +34,20 @@ export default function Navbar() {
                   >
                     Home
                   </Link>
+                  {/* Summarize Link */}
                   <Link
-                    href="/guestbook"
+                    href="https://aiesumz.aiengineer.world/"
                     prefetch
                     className={`${
-                      pathname === "/guestbook"
+                      pathname === "https://aiesumz.aiengineer.world/"
                         ? "border-red-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
-                    Guestbook
+                    Summarize
                   </Link>
+
+                  {/* Projects Link */}
                   <Link
                     href="/projects"
                     prefetch
@@ -56,6 +59,22 @@ export default function Navbar() {
                   >
                     Projects
                   </Link>
+
+                  {/* Guestbook Link */}
+                  <Link
+                    href="/guestbook"
+                    prefetch
+                    className={`${
+                      pathname === "/guestbook"
+                        ? "border-red-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    }`}
+                  >
+                    Guestbook
+                  </Link>
+                  
+
+                  {/* Button for dark or light mode */}
                   <Themebutton />
                 </div>
               </div>
