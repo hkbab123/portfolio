@@ -1,5 +1,5 @@
 import Form from "../components/Form";
-import { prisma } from "../db";
+import prisma from "../db";
 
 async function getEntries() {
   const data = await prisma.guestbook.findMany({
@@ -22,6 +22,12 @@ export default async function Guestbook() {
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           Guestbook
         </h1>
+        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          Leave a message below! 
+          <br />
+          <span className="text-sm font-bold">Note: Your message is public!!!</span>
+        </p>
+
       </div>
 
       <div className="w-full">
@@ -29,7 +35,7 @@ export default async function Guestbook() {
           <Form />
 
           <div className="flex flex-col space-y-2">
-            {data.map((entry) => (
+            {data.map((entry: any) => (
               <div key={entry.id} className="w-full text-sm break-words">
                 {entry.message}
               </div>

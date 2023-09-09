@@ -4,6 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Themebutton from "./Themebutton";
+import Image from "next/image";
 
 export default function Navbar() {
   let pathname = usePathname() || "/";
@@ -15,10 +16,9 @@ export default function Navbar() {
             <div className="flex justfiy-between h-16">
               <div className="flex justify-between w-full">
                 <div className="flex items-center">
+                
                   <Link href="/">
-                    <h1 className="text-2xl font-medium">
-                      Jan <span className="text-teal-500">Marshal</span>
-                    </h1>
+                  <Image  src="/hkb.png" alt="logo" width={36} height={3} />
                   </Link>
                 </div>
 
@@ -28,7 +28,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/"
-                        ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        ? "border-red-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
@@ -39,7 +39,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/guestbook"
-                        ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        ? "border-red-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
@@ -50,7 +50,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/projects"
-                        ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        ? "border-red-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                         : "border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
@@ -106,8 +106,8 @@ export default function Navbar() {
                 prefetch
                 className={`${
                   pathname == "/"
-                    ? "bg-teal-50  border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
+                    ? "bg-red-50  border-red-600 text-red-600 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
+                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-red-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
                 } `}
               >
                 Home
@@ -117,8 +117,8 @@ export default function Navbar() {
                 prefetch
                 className={`${
                   pathname == "/guestbook"
-                    ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
+                    ? "bg-red-50 border-red-500 text-red-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
+                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-red-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
                 } `}
               >
                 Guestbook
@@ -128,8 +128,8 @@ export default function Navbar() {
                 prefetch
                 className={`${
                   pathname == "/projects"
-                    ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
-                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
+                    ? "bg-red-50 border-red-500 text-red-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
+                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-red-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
                 } `}
               >
                 Projects

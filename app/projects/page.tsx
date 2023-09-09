@@ -23,7 +23,7 @@ async function getProjects() {
   return data;
 }
 
-export const revalidate = 60;
+export const revalidate = 5;
 
 export default async function Projects() {
   const data: Data[] = await getProjects();
@@ -65,7 +65,7 @@ export default async function Projects() {
               <a
                 href={project.link}
                 target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-red-500"
               >
                 Learn More!
                 <span className="block transition-all group-hover:ms-0.5">
